@@ -225,12 +225,12 @@ text-align: center;
 .scrlUp{
   position: fixed;
   background: #83b735;
-  width: 2.25rem ;
-  height: 2rem;
+  width: 5rem;
+  height:5rem;
   bottom: 1rem;
   right: 1rem;
   text-align: center;
-  line-height: 1.5;
+  line-height: 1.8;
   color: #fff;
   font-size: 1.4rem;
   opacity: 1;
