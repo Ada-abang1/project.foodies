@@ -97,28 +97,19 @@ header .navbar a:hover {
   color: #fff;
   background: var(--main-color);
 }
-/*HEADER ICONS */
-header .icons i,
-header .icons a {
+/* ###################   ----HAMBUGER MENU------     #################*/
+header .hambuger{
+  display: none ;
   cursor: pointer;
-  margin-left: 0.5rem;
-  height: 4.5rem;
-  line-height: 4.5rem;
-  width: 4.5rem;
-  text-align: center;
-  font-size: 1.75rem;
-  color: var(--text-color);
-  border-radius: 50%;
-  background: #eee;
-  transition: all 0.8s ease;
 }
-header .icons i:hover,
-header .icons a:hover {
-  color: #fff;
-  background: var(--main-color);
-}
-header .icons #menu-bars {
-  display: none;
+
+header .hambuger #menu-bar {
+  display: block;
+  width: 20px; height: 2px;
+  background-color: #000;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
 }
 
 /* END OF HEADER AND NAVIGATION BAR */
@@ -501,6 +492,7 @@ line-height: 1.25;
 .footer{
   background: #333;
   width: 100%;
+  min-height: 40vh;
 
 }
 .footer .box-container{
@@ -570,8 +562,17 @@ line-height: 1.25;
   }
 }
 @media (max-width: 768px) {
-  header .icons #menu-bars {
-    display: inline-block;
+  header .hambuger {
+    display: block;
+  }
+   header .hambuger .active #menu-bar:nth-child(2){
+    opacity: 0;
+  }
+  header .hambuger.active #menu-bar:nth-child(1){
+    transform: translateY(8px) rotate(45deg);
+  }
+  header .hambuger.active #menu-bar:nth-child(3){
+    transform: translateY(-8px) rotate(-45deg);
   }
   .dishes .box-container{
     display: grid;
@@ -627,7 +628,11 @@ line-height: 1.25;
     font-size: 1.5rem;
   }
   
- 
+  .footer .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: 1rem;
+  }
 
 }
 @media (max-width: 480px) {
