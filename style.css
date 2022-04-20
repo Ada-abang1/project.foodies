@@ -64,7 +64,7 @@ section{
 /*      END OF BOTTON SECTION    */
 /* HEADER AND NAVIGATION BAR */
 header {
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   right: 0;
@@ -165,20 +165,27 @@ text-align: center;
 /* -- SCROLL TO TOP SECTION  -- */
 .scrlUp{
   position: fixed;
-  background: #83b735;
-  width: 5rem;
-  height:5rem;
+  background-color: hsl(0 0% 100% /0.3);
+  width: 4rem;
+  height:4rem;
+  border-radius:50%;
   bottom: 1rem;
-  right: 1rem;
+  right: 2rem;
   text-align: center;
   line-height: 1.8;
-  color: #fff;
-  font-size: 3rem;
+  color: #000;
+  font-size: 2rem;
   opacity: 1;
   overflow: hidden;
   z-index: 1000;
+  transition:0.3s ease-out;
   box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 20%), 0 1px 5px 0 rgb(0 0 0 / 12%);
 }
+.scrlUp:hover{
+  background-color: #494848;
+  color:#fff;
+}
+
 /* -- END OF SCROLL TO TOP SECTION  -- */
 
 /* -- dishes section starts -- */
@@ -274,7 +281,7 @@ text-align: center;
 }
 
 .about .row .image {
-  flex: 1 1 40rem;
+  flex: 1 1 45rem;
 }
 .about .row .image img{
   width: 80%;
@@ -290,9 +297,10 @@ text-align: center;
 }
 .about .row .content p{
   color: var(--light-color);
-  font-size: 1.35rem;
+  font-size: 14px;
   padding: .5rem 0;
-  line-height: 1.5;
+  line-height: 1.3;
+  font-weight:500;
 }
 .about .row .content .icons-container{
   display: flex;
@@ -319,6 +327,14 @@ text-align: center;
 .about .row .content .icons-container .icons span{
   font-size: 1.5rem;
   color: var(--text-color);
+}
+.about .row .content .btn{
+  display:block;
+  margin-left:auto;
+  margin-top:20px;
+  font-size:14px;
+  padding:10px;
+  width:100px;
 }
 /*    <!-- menu section  -->  */
 .menu .box-container{
@@ -492,8 +508,6 @@ line-height: 1.25;
 .footer{
   background: #333;
   width: 100%;
-  min-height: 40vh;
-
 }
 .footer .box-container{
   display: grid;
@@ -534,8 +548,8 @@ line-height: 1.25;
 
 .copyright {
   padding: .5rem;
-  padding-top: 1.5rem;
-  margin-top: 1.5rem;
+  padding-top: 1rem;
+  margin-top: 1rem;
   border-top: .1rem solid rgba(0, 0, 0, 0.1);
   text-align: center;
   color: var(--light-color);
@@ -630,7 +644,12 @@ line-height: 1.25;
     grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
     gap: 1rem;
   }
-
+  .about .row .image{
+  display:flex;
+   justify-content:center;
+    align-content:center;
+  }
+  
 }
 @media (max-width: 480px) {
   html {
@@ -641,6 +660,9 @@ line-height: 1.25;
   }
   header .hambuger{
     display: block;
+  }
+  .about .row . image img{
+  width:60%;
   }
   
   .order form{
