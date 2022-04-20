@@ -166,21 +166,23 @@ text-align: center;
 .scrlUp{
   position: fixed;
   background-color: hsl(0 0% 100% /0.3);
+  backdrop-filter: blur(4rem);
   width: 4rem;
   height:4rem;
-  border-radius:50%;
+  border-radius: 50%;
+   border: 1px solid #948985;
   bottom: 1rem;
   right: 2rem;
   text-align: center;
   line-height: 1.8;
   color: #000;
   font-size: 2rem;
-  opacity: 1;
   overflow: hidden;
   z-index: 1000;
   transition:0.3s ease-out;
   box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 20%), 0 1px 5px 0 rgb(0 0 0 / 12%);
 }
+
 .scrlUp:hover{
   background-color: #494848;
   color:#fff;
