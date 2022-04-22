@@ -94,15 +94,19 @@ header .logo i {
 }
 header .navbar a {
   font-size: 1.7rem;
-  border-radius: 0.5rem;
+  border-radius: 3rem;
+  margin-left:.5rem;
   padding: 0.5rem 1.5rem;
   color: var(--light-color);
-  transition: all 0.8s ease;
+  transition: all 0.5s ease;
 }
 header .navbar a.active,
 header .navbar a:hover {
   color: #fff;
   background: var(--main-color);
+   box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%), 
+     0 3px 1px -2px rgb(0 0 0 / 20%),
+     0 1px 5px 0 rgb(0 0 0 / 12%);
 }
 /* ###################   ----HAMBUGER MENU------     #################*/
 header .hambuger{
