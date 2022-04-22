@@ -207,11 +207,11 @@ text-align: center;
 /* -- dishes section starts -- */
 .dishes .box-container{
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   gap: 1.5rem;
 }
 .dishes .box-container img{
-  width: 80%;
+  width: 70%;
   object-fit: cover;
   object-position: center;
   transition: 0.5s ease;
